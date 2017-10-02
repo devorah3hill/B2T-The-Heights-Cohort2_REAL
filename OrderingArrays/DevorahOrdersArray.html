@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DevorahOrdersArrays</title>
+</head>
+<body>
+	<ul id='list'></ul>
+	<script type="text/javascript">
+
+		var colors = ['Blue', 'Green', 'Red', 'Orange', 'Violet', 'Indigo', 'Yellow'];
+		var o = ['th','st','nd','rd'];
+		
+
+		//var i indicates an index
+		//var i acts as counter
+		//the first element in array is indecies 0
+		//i = 0 index and .length which is the full length of the array
+		// (i+1) is ordering the "placements" from 'st'-'th' everytime it goes back around. 
+		// console.log(toDisplay); this is to console.log the todisplay results. 
+
+			for(var i = 0; i < colors.length; i++){
+				if(i == 0){
+					toDisplay = ("1" + o[1] + " choice is " + colors[i]);
+				}else if (i == 1){
+					toDisplay = ("2" + o[2] + " choice is " + colors[i]);
+				}else if (i == 2){
+					toDisplay = ( "3" + o[3] + " choice is " + colors[i]);
+				}else{
+					toDisplay=((i+1)+ o[0] + " choice is " + colors[i]);
+				}
+				console.log(toDisplay);
+		}
+	</script>
+
+</body>
+</html>
