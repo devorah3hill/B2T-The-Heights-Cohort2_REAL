@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DevorahsCalculator</title>
+<!--caculator design demensions determined by the width (at 260px), bg/color (light blue), border color (solid blue), border width (2px) ,border radius (4px). Button design is each button is 18% of the calculator's width with a 4px border. The color is light grey,font size is 20px and the weight is 900. Buttom margin is 2% of the button size. The button radius like calculator's, is 4px. The input text/answer window is centered "relative" to the interior size of the calculator. It's width is 90% with a 5px margin using the same font size as the buttons at 20px.
+		-->
+		<style>
+		#CalculatorBody{		/* entire area of calculator */
+			background: lightblue;
+			position: relative;
+			width: 260px;
+			border: 2px solid blue;
+			border-radius: 4px;
+
+		}
+		input[type="button"] {	/* calc buttons: gray 20pixels */
+			background: lightGray;
+			width: 18%;
+			font-size: 20px;
+			font-weight: 900;
+			margin: 2%;
+			border-radius: 4px;
+
+		}
+		input[type="text"] {	/* ANSWER text box; take up 90% of UI width */
+			position: relative; /* using 5px margins ; 20px font */
+			display: block;
+			width: 90%;
+			margin: 5px auto;
+			font-size: 20px;
+
+		}
+
+
+		</style>
+	</head>
+
+
+	<body>
+		<div id="CalculatorBody">   <!-- section displaying calculator -->
+			<form name="calculator">
+				<input type="text" name="answer" />   <!-- ANSWER bar -->
+				<br/>
+
+				<!-- row 1 of calculator buttons; click adds value to ANSWER -->
+				<input type="button" value=" 1 " onclick="calculator.answer.value += '1'" />
+				<input type="button" value=" 2 " onclick="calculator.answer.value += '2'" />
+				<input type="button" value=" 3 " onclick="calculator.answer.value += '3'" />
+				<input type="button" value=" + " onclick="calculator.answer.value += '+'" />
+				<br/>
+
+
+				<!-- row 2 of calculator buttons; click adds value to ANSWER -->
+				<input type="button" value=" 4 " onclick="calculator.answer.value += '4'" />
+				<input type="button" value=" 5 " onclick="calculator.answer.value += '5'" />
+				<input type="button" value=" 6 " onclick="calculator.answer.value += '6'" />
+				<input type="button" value=" - " onclick="calculator.answer.value += '-'" />
+				<br/>
+
+
+				<!-- row 3 of calculator buttons; click adds value to ANSWER -->
+				<input type="button" value=" 7 " onclick="calculator.answer.value += '7'" />
+				<input type="button" value=" 8 " onclick="calculator.answer.value += '8'" />
+				<input type="button" value=" 9 " onclick="calculator.answer.value += '9'" />
+				<input type="button" value=" x " onclick="calculator.answer.value += '*'" />
+				<br/>
+
+				<!-- row 4 of calculator buttons; click adds value to ANSWER -->
+				<!-- '=' takes the text formula in ANSWER and does a mathematical evaluation
+			 		 sets the value of ANSWER to that evaulation amount -->
+				<input type="button" value=" c " onclick="calculator.answer.value = ''" />
+				<input type="button" value=" 0 " onclick="calculator.answer.value += '0'" />
+				<input type="button" value=" = " onclick="calculator.answer.value = eval(calculator.answer.value)" />
+				<input type="button" value=" / " onclick="calculator.answer.value += '/'" />
+				<br/>
+
+			</form>
+
+		</div>
+
+	</body>
+</html>
