@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Find The Largest Number</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//Create an empty array, values obtained from user input
+			var numbers = [0, 0, 0];
+			//obtain values from users, using prompt, assign them to respective indecies in array
+			numbers[0] = prompt('First number please');
+			numbers[1] = prompt('Second number please');
+			numbers[2] = prompt('Third number please');
+			//Use Max.max function to determine the largest value in the array
+			var thelargest = Math.max.apply(Math, numbers);
+			//laregest value displays out to the console
+			console.log(thelargest + 'is the largest number');
+		</script>
+	</body>
+</html>
