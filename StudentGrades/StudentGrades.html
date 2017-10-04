@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Compute the average marks and grade</title>
+		<script type="text/javascript">
+		
+		//Array containg all grades
+		var grade = [80, 77, 88, 95, 68];	
+		//Empty variable for storing the average grade
+		var theAverage = 0;
+		//create variable for comtaining the sum of all grades
+		var getGrades = 0;
+		//for loop iterates through array getting the grade, adding it to getGrades
+		for(var i = 0; i < grade.length; i++){
+			getGrades += grade[i];
+		}
+		//The average is equal to sum of Student grades array devided by the number of grades
+		theAverage = getGrades/grade.length;
+		var letterGrade = '';
+		if (theAverage <60){
+			letterGrade = 'F';
+		}else if (theAverage <=70){
+			letterGrade = 'D';
+		}else if (theAverage <80){
+			letterGrade = 'C'
+		}else if (theAverage <90){
+			letterGrade = 'B'
+		}else if (theAverage >=90){
+			letterGrade = 'A'
+		}  
+		console.log(letterGrade) 
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
