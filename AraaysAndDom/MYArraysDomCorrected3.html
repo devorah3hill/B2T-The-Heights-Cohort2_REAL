@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DevorahsArraysAndDom</title>
+        <script type="text/javascript">
+            
+        // starting array of fruit
+        var fruits = ["apple", "orange", "kiwi"];	
+            
+        // Function: prompt for fruit, add it to fruit array
+        function addFruit()
+        {
+            // prompt code to get in put from user
+            var input=prompt("add more fruit please");
+
+            // set text to lower case for better sorting
+            fruits.push(input.toLowerCase());
+
+            // sorting the elements
+            fruits.sort();
+
+            // displaying the sorted the elements		
+            document.getElementById("demo").innerHTML=fruits.join(" with ");
+        }  // function: 
+        </script>
+	</head>
+	<body>
+		<p id="demo">apple with orange with kiwi</p>
+        <button onclick="addFruit()">Add More Fruit Please</button>
+	</body>
+</html>
