@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Get Day of the Week</title>
+    </head>
+    <body>
+        <h1 id="day"></h1>
+        <script type="text/javascript">
+            //Create a variable to contain the current day of the week
+            var CurrentDay = new Date().getDay();
+            //Getting the day of the week in a numeric value and assigning each return value of CurrentDay to a message
+            switch (CurrentDay) {
+                case 0:
+                    var DayMessage = "Hello Sunhine, it's Sunday!";
+                    break;
+                case 1:
+                    var DayMessage = "A Molodic Monday 2 U!";
+                    break;
+                case 2:
+                    var DayMessage = "Have a Tremendous Tuesday!";
+                    break;
+                case 3:
+                    var DayMessage = "Welcome 2 Wednesday!";
+                    break;
+                case 4:
+                    var DayMessage = "Thinker's day Thursday!";
+                    break;
+                case 5:
+                    var DayMessage = "TGIF it's Friday!";
+                    break;
+                case 6:
+                    var DayMessage = "Saturated Saturday is here!";
+                    break;
+                }
+                //Modifying the h1 in the body to display the day of the week
+                document.getElementById("day").innerHTML = DayMessage;
+        </script>
+    </body>
+</html>
