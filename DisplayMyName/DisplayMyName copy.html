@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+
+		<!-- create input form using placeholders to get infromation first and last names from user -->
+		<p id="display"></p>
+			<form>
+			First Name: <input type="text" id="fname" placeholder="Please EnterFristName"><br>
+			<br>
+			<br>
+			Last Name: <input type="text" id="lname" placeholder="Please EnterLastName"><br>
+			<br>
+
+			<!-- create input button that onclick submits the getFormvalue of first and last name -->
+			<input type="button" value="submit" onclick="getFormvalue()">
+
+			</form>
+
+		<script type="text/javascript">
+
+			
+			// getFormvalue() gets the first and last name from the page 
+			//     and displays it as a single name in the 'display' HTML element
+			function getFormvalue(){
+				var firstname = document.getElementById('fname').value;
+
+				var lastname = document.getElementById('lname').value; 
+				document.getElementById('display').innerHTML = 
+				firstname + " " + lastname; 
+			} 
+
+
+			
+		</script>
+
+	</body>
+	</html>
