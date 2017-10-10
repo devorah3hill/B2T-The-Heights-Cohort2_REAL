@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<P id='reading'></P>
+	<script type="text/javascript">
+		var library =[
+		{author: 'Bill Gates', title: 'The Road Ahead', readingStatus: true},
+		{author: 'Steve Jobs', title: 'Walter Isaacson', readingStatus: true},
+		{author: 'Suzann Collins', title: 'Mockingjay: The Final Book of The Hunger Games', readingStatus: false},
+		];
+		var text = '';
+		for (var i =0; i<library.length; i++) {
+			//for loop (line 15) intilizes the 1st variable, creates a condition and increments variable by one
+			if(library[i].readingStatus == true){
+			//if statement (line17) cycles through library array checking if the readingStatus is equal to true, If true insert title and author into text line 19
+				text += 'Already Read ' +library[i].title+' by '+library[i].author+'<br/>';
+			} else {
+			//Same as the above inserts title and author into text readingStatus when it equals flase
+				text += 'You Still need to read ' +library[i].title + ' by ' +library[i].author + '<br/>';
+
+			}
+		}
+
+		document.getElementById('reading').innerHTML = text;
+	</script>
+
+	</body>
+</html>

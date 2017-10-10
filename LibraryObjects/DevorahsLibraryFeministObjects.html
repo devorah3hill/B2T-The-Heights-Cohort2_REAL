@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+	<P id='reading'></P>
+	<script type="text/javascript">
+		var library =[
+		{author: 'Michelle Alexander', title: 'The New Jim Crow', readingStatus: true},
+		{author: 'Grace Lee Boggs', title: 'The Next American Revolution', readingStatus: true},
+		{author: 'Cherríe Moraga and Gloria Anzaldúa', title: 'This Bridge Called My Back: Writings by 		  Radical Women of Color', readingStatus: true},
+		{author: 'Carole Boyce Davis', title: 'Claudia Jones: Beyond Containment', readingStatus: false},
+		];
+		var text = '';
+		for (var i =0; i<library.length; i++) {
+			//for loop (line 16) intilizes the 1st variable, creates a condition and increments variable by one
+			if(library[i].readingStatus == true){
+			//if statement (line17) cycles through library array checking if the readingStatus is equal to true, If true insert title and author into text line 19
+				text += ' Already Read ' + library[i].title + ' by '+ library[i].author+'<br/>';
+			} else {
+			//Same as the above inserts title and author into text readingStatus when it equals flase
+				text += ' You Still need to read '  +library[i].title  +  ' by ' + library[i].author + '<br/>';
+
+			}
+		}
+
+		document.getElementById('reading').innerHTML = text;
+	</script>
+
+	</body>
+</html>
